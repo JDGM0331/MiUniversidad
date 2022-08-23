@@ -55,7 +55,7 @@ ROOT_URLCONF = 'MiUniversidad.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['C:/Practicas_DJANGO/YOUTUBE/MiUniversidad/Modulos/Academica/plantillas'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -118,7 +118,17 @@ USE_TZ = False
 
 STATIC_URL = 'static/'
 
+# Configurations to send an email
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = "smtp.gmail.com"
+EMAIL_USE_TLS = True
+EMAIL_PORT = 587
+EMAIL_HOST_USER = "jesus.guevara0@misena.edu.co"
+EMAIL_HOST_PASSWORD = "Jedague(3103G22022)"
+    
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
